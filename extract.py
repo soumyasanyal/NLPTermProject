@@ -13,7 +13,7 @@ def getHeight(node):
 	if node.get_children() == None:		#leaf node
 		depth  = 0
 	else:
-		depth = -1
+		depth = -1	#we need max of the heights of subtrees
 		for c in node.get_children():
 			depth = max(depth, getHeight(c))
 	return depth + 1
